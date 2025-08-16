@@ -16,3 +16,19 @@
 
 ## License
 MIT
+
+## ສະຄຣິບສຳລັບ loop commit
+ໃຊ້ `scripts/loop-commit.sh` ເພື່ອຄອມມິດຫຼາຍໆເທື່ອຕາມຈຳນວນທີ່ກຳນົດ (ເພື່ອທົດສອບ/ໂຄງການ demo)
+
+ຕົວຢ່າງ:
+```zsh
+chmod +x scripts/loop-commit.sh
+./scripts/loop-commit.sh -n 5 -m "chore: heartbeat" -i 2 -p
+```
+ອະທິບາຍ:
+- `-n` ຈຳນວນ commit
+- `-m` ຂໍ້ຄວາມ commit
+- `-i` ໄລຍະຫ່າງລະຫວ່າງ commit (ວິນາທີ)
+- `-p` push ຫຼັງຈາກແຕ່ລະ commit (ຖ້າບໍ່ໃສ່ ຈະ push ທ້າຍສຸດ)
+- `-f` ໄຟລ໌ທີ່ໃຊ້ບັນທຶກ (default: `.commit-log`)
+- `-d` dry-run ບໍ່ຮັນ git
