@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thongsao2020.github.io/blog-me/sitemap.xml
