@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="lo">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Codecools Company</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="logo" /> <span>Codecools Company</span></a>
+    <nav class="nav">
+      <a href="/projects.html">Projects</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn">Contact</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>ຕິດຕໍ່</h1>
+    <article class="card">
+      <p>ຟອມນີ້ເປັນຕົວຢ່າງ ບໍ່ສົ່ງຂໍ້ມູນຈິງ.</p>
+      <form id="f" onsubmit="event.preventDefault(); this.reset(); alert('ຂອບໃຈ! (demo)');">
+        <div style="display:grid;gap:.6rem;max-width:520px">
+          <input required placeholder="ຊື່" style="padding:.7rem;border-radius:.6rem;border:1px solid #1f2a3b;background:#121722;color:#e6edf3" />
+          <input required type="email" placeholder="Email" style="padding:.7rem;border-radius:.6rem;border:1px solid #1f2a3b;background:#121722;color:#e6edf3" />
+          <textarea rows="4" placeholder="ຂໍ້ຄວາມ" style="padding:.7rem;border-radius:.6rem;border:1px solid #1f2a3b;background:#121722;color:#e6edf3"></textarea>
+          <button class="btn primary" type="submit">ສົ່ງ</button>
+        </div>
+      </form>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container">© <span id="year"></span> Codecools Company</div></footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

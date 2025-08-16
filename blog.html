@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="lo">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Codecools Company</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="logo" /> <span>Codecools Company</span></a>
+    <nav class="nav">
+      <a href="/projects.html">Projects</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Blog</h1>
+    <div class="list" id="post-list"></div>
+  </main>
+
+  <footer class="site-footer"><div class="container">© <span id="year"></span> Codecools Company</div></footer>
+  <script src="/assets/js/main.js" defer></script>
+  <script>
+  const posts = [
+    {title:'ວິທີຄິດເວັບ Static ໃຫ້ກະທັດຮັດ', date:'2025-08-10', excerpt:'ເນັ້ນຄວາມງ່າຍ ລົດ build step ແລະ UX.'},
+    {title:'Design System ນ້ອຍໆ ສຳລັບ Startup', date:'2025-08-12', excerpt:'ເລີ່ມຈາກ token ແລະ component.'},
+    {title:'Checklist ກ່ອນ Deploy ຂຶ້ນ Pages', date:'2025-08-14', excerpt:'SEO, Performance ແລະ Security ພື້ນຖານ.'}
+  ];
+  const wrap = document.getElementById('post-list');
+  posts.forEach(p=>{
+    const a = document.createElement('article'); a.className='item';
+    a.innerHTML = `<h4>${p.title}</h4><div class="muted">${new Date(p.date).toLocaleDateString('lo-LA')}</div><p>${p.excerpt}</p>`;
+    wrap.appendChild(a);
+  });
+  </script>
+</body>
+</html>

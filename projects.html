@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="lo">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Codecools Company</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="logo" /> <span>Codecools Company</span></a>
+    <nav class="nav">
+      <a href="/projects.html">Projects</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Projects</h1>
+    <p class="muted">ໂຄງການຕົວຢ່າງ ບໍ່ໃຊ້ຂໍ້ມູນຈິງ</p>
+    <div class="list" id="project-list"></div>
+  </main>
+
+  <footer class="site-footer"><div class="container">© <span id="year"></span> Codecools Company</div></footer>
+  <script src="/assets/js/main.js" defer></script>
+  <script>
+    const data = [
+      {name:'LAO Weather Demo', summary:'ເຄື່ອງມືດູອາກາດຕົວຢ່າງ', stack:['HTML','CSS','JS']},
+      {name:'Todo Minimal', summary:'Todo UI ແບບງ່າຍ', stack:['JS','LocalStorage']},
+      {name:'Portfolio Theme', summary:'Template ໜ້າຜົນງານ', stack:['Design','CSS']}
+    ];
+    const wrap = document.getElementById('project-list');
+    data.forEach(p=>{
+      const a = document.createElement('article'); a.className='item';
+      a.innerHTML = `<h4>${p.name}</h4><p>${p.summary}</p><div>${p.stack.map(s=>`<span class="badge">${s}</span>`).join(' ')}</div>`;
+      wrap.appendChild(a);
+    });
+  </script>
+</body>
+</html>
