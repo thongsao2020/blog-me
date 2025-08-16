@@ -12,6 +12,8 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,
 .btn.primary{background:linear-gradient(120deg,var(--accent),var(--primary));border:none;color:#0b0f14;font-weight:700}
 .hero{padding:3rem 0}
 .hero h1{font-size:2.2rem;margin:0 0 .6rem}
+.muted{color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .grid{display:grid;gap:1rem}
 .grid.two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .grid.three{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
