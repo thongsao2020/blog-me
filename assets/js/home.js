@@ -1,17 +1,22 @@
-const projects = [
-  {title:'LAO Weather Demo', tags:['demo','api','frontend'], desc:'ແອັບດູອາກາດຕົວຢ່າງ ດຶງຂໍ້ມູນຈາກ API ສາທາລະນະ (mock).'},
-  {title:'Todo Minimal', tags:['ui','state'], desc:'UI todo ງ່າຍໆ ສຳລັບສະແດງ pattern ການຈັດການ state.'},
-  {title:'Portfolio Theme', tags:['design','theme'], desc:'template ໜ້າ portfolio ໃຊ້ HTML/CSS ລ້ວນໆ.'}
-];
-
-const posts = [
-  {title:'ວິທີຄິດເວັບ Static ໃຫ້ກະທັດຮັດ', date:'2025-08-10', excerpt:'ເນັ້ນຄວາມງ່າຍ ລົດ build step ແລະເນັ້ນ UX.'},
-  {title:'Design System ນ້ອຍໆ ສຳລັບ Startup', date:'2025-08-12', excerpt:'ເລີ່ມຕົ້ນຈາກ token ແລະ component ພື້ນຖານ.'}
-];
+let projects = [];
+let posts = [];
+async function load(){
+  try{ projects = await (await fetch('/data/projects.json')).json(); }
+  catch{ projects = [
+    {title:'LAO Weather Demo', tags:['demo','api','frontend'], desc:'ແອັບດູອາກາດຕົວຢ່າງ (fallback).'},
+    {title:'Todo Minimal', tags:['ui','state'], desc:'UI todo ເບົາໆ (fallback).'},
+    {title:'Portfolio Theme', tags:['design','theme'], desc:'template portfolio (fallback).'}
+  ]; }
+  try{ posts = await (await fetch('/data/posts.json')).json(); }
+  catch{ posts = [
+    {title:'Static Web ກະທັດຮັດ', date:'2025-08-10', excerpt:'fallback excerpt'},
+  ]; }
+}
 
 function el(tag, cls){ const e=document.createElement(tag); if(cls) e.className=cls; return e; }
 
-window.addEventListener('DOMContentLoaded',()=>{
+window.addEventListener('DOMContentLoaded',async()=>{
+  await load();
   const fp = document.getElementById('featured-projects');
   projects.forEach(p=>{
     const card = el('article','card');

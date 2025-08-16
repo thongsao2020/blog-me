@@ -1,0 +1,5 @@
+[
+  {"title":"LAO Weather Demo","tags":["demo","api","frontend"],"desc":"ແອັບດູອາກາດຕົວຢ່າງ ດຶງຂໍ້ມູນຈາກ API ສາທາລະນະ (mock)."},
+  {"title":"Todo Minimal","tags":["ui","state"],"desc":"UI todo ງ່າຍໆ ສຳລັບສະແດງ pattern ການຈັດການ state."},
+  {"title":"Portfolio Theme","tags":["design","theme"],"desc":"template ໜ້າ portfolio ໃຊ້ HTML/CSS ລ້ວນໆ."}
+]
