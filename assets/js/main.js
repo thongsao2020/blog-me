@@ -1,4 +1,9 @@
 (function(){
+  // utils
+  window.$ = (sel, ctx=document) => ctx.querySelector(sel);
+  window.$$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+  window.debounce = (fn, ms=200)=>{ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); } };
+
   const y = document.getElementById('year');
   if(y) y.textContent = new Date().getFullYear();
 
