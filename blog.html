@@ -19,6 +19,8 @@
 
   <main class="container">
     <h1>Blog</h1>
+    <input id="q" placeholder="ຄົ້ນຫາຫົວຂໍ້..." style="width:100%;max-width:520px;padding:.7rem;border-radius:.6rem;border:1px solid #1f2a3b;background:#121722;color:#e6edf3" />
+    <div style="height:.8rem"></div>
     <div class="list" id="post-list"></div>
   </main>
 
@@ -31,11 +33,20 @@
     {title:'Checklist ກ່ອນ Deploy ຂຶ້ນ Pages', date:'2025-08-14', excerpt:'SEO, Performance ແລະ Security ພື້ນຖານ.'}
   ];
   const wrap = document.getElementById('post-list');
-  posts.forEach(p=>{
-    const a = document.createElement('article'); a.className='item';
-    a.innerHTML = `<h4>${p.title}</h4><div class="muted">${new Date(p.date).toLocaleDateString('lo-LA')}</div><p>${p.excerpt}</p>`;
-    wrap.appendChild(a);
-  });
+  function render(list){
+    wrap.innerHTML='';
+    list.forEach(p=>{
+      const a = document.createElement('article'); a.className='item';
+      a.innerHTML = `<h4>${p.title}</h4><div class="muted">${new Date(p.date).toLocaleDateString('lo-LA')}</div><p>${p.excerpt}</p>`;
+      wrap.appendChild(a);
+    });
+  }
+  render(posts);
+  const input = document.getElementById('q');
+  input.addEventListener('input', debounce(()=>{
+    const term = input.value.toLowerCase();
+    render(posts.filter(p=>p.title.toLowerCase().includes(term)));
+  }, 150));
   </script>
 </body>
 </html>
