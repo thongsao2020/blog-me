@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Codecools Blog Me</title>
+    <link>https://thongsao2020.github.io/blog-me</link>
+    <description>Lao blog demo</description>
+    <item><title>RSS ກັບການແຈ້ງຂ່າວສຳລັບບລັອກ</title><link>https://thongsao2020.github.io/blog-me/blog.html#rss-for-blogs</link><pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate><description>ເພີ່ມ feed ໃຫ້ຜູ້ອ່ານຕິດຕາມໄດ້ງ່າຍ.</description></item><item><title>Checklist ກ່ອນ Deploy ຂຶ້ນ Pages</title><link>https://thongsao2020.github.io/blog-me/blog.html#deploy-checklist</link><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><description>SEO, Performance ແລະ Security ພື້ນຖານ.</description></item><item><title>Design System ນ້ອຍໆ ສຳລັບ Startup</title><link>https://thongsao2020.github.io/blog-me/blog.html#mini-design-system</link><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><description>ເລີ່ມຕົ້ນຈາກ token ແລະ component ພື້ນຖານ.</description></item><item><title>ວິທີຄິດເວັບ Static ໃຫ້ກະທັດຮັດ</title><link>https://thongsao2020.github.io/blog-me/blog.html#static-think</link><pubDate>Sun, 10 Aug 2025 00:00:00 GMT</pubDate><description>ເນັ້ນຄວາມງ່າຍ ລົດ build step ແລະເນັ້ນ UX.</description></item>
+  </channel>
+</rss>
