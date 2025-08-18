@@ -1,4 +1,6 @@
 [
-  {"title":"ວິທີຄິດເວັບ Static ໃຫ້ກະທັດຮັດ","date":"2025-08-10","excerpt":"ເນັ້ນຄວາມງ່າຍ ລົດ build step ແລະເນັ້ນ UX."},
-  {"title":"Design System ນ້ອຍໆ ສຳລັບ Startup","date":"2025-08-12","excerpt":"ເລີ່ມຕົ້ນຈາກ token ແລະ component ພື້ນຖານ."}
+  {"title":"ວິທີຄິດເວັບ Static ໃຫ້ກະທັດຮັດ","slug":"static-think","date":"2025-08-10","tags":["web","static"],"excerpt":"ເນັ້ນຄວາມງ່າຍ ລົດ build step ແລະເນັ້ນ UX."},
+  {"title":"Design System ນ້ອຍໆ ສຳລັບ Startup","slug":"mini-design-system","date":"2025-08-12","tags":["design","ui"],"excerpt":"ເລີ່ມຕົ້ນຈາກ token ແລະ component ພື້ນຖານ."},
+  {"title":"Checklist ກ່ອນ Deploy ຂຶ້ນ Pages","slug":"deploy-checklist","date":"2025-08-14","tags":["deploy","pages"],"excerpt":"SEO, Performance ແລະ Security ພື້ນຖານ."},
+  {"title":"RSS ກັບການແຈ້ງຂ່າວສຳລັບບລັອກ","slug":"rss-for-blogs","date":"2025-08-16","tags":["rss","content"],"excerpt":"ເພີ່ມ feed ໃຫ້ຜູ້ອ່ານຕິດຕາມໄດ້ງ່າຍ."}
 ]
